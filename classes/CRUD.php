@@ -31,8 +31,9 @@ class CRUD extends Database{
         return $result->execute($parameters);
     }
 
-    public function deleteRecord($delete_record, $parameters);
-        $result = $this->db_connection->prepare($delete_record, $parameters);
+    public function deleteRecord($delete_record, $parameters){
+        $result = $this->db_connection->prepare($delete_record);
         return $result->execute($parameters);
+    }
 }
 ?>
